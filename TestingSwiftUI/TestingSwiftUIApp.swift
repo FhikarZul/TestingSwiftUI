@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct TestingSwiftUIApp: App {
+    private let viewModel = ViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(inputNumber: "")
+                .environmentObject(viewModel)
         }
     }
 }
